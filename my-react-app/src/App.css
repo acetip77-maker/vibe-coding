@@ -67,6 +67,31 @@ h1 {
   margin: 0 0 10px;
 }
 
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 1rem;
+  color: #3a3f4e;
+}
+
+.star.filled {
+  color: #f5c542;
+  text-shadow: 0 0 8px rgba(245, 197, 66, 0.4);
+}
+
+.rating-number {
+  margin-left: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .card p {
   font-size: 0.9rem;
   line-height: 1.6;
