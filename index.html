@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세계 영화 명작 탐험</title>
+  <style>
+    /* 전체 페이지 기본 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+      background-image: url("profile.jpg");
+      background-size: 200px auto;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      color: #333333;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    /* 내용을 담는 카드 영역 */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 페이지 제목 */
+    h1 {
+      font-size: 2rem;
+      color: #8b0000;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    /* 소개 문단 */
+    .intro {
+      font-size: 1.05rem;
+      color: #333333;
+      margin-bottom: 32px;
+      padding: 20px;
+      background-color: #f0f4f8;
+      border-radius: 8px;
+      border-left: 4px solid #4a90d9;
+    }
+
+    /* 좋아하는 것 섹션 제목 */
+    h2 {
+      font-size: 1.25rem;
+      color: #8b0000;
+      margin-bottom: 16px;
+    }
+
+    /* 목록 스타일 */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      color: #333333;
+      background-color: #f9fafb;
+      border-radius: 6px;
+      border: 1px solid #e8ecf0;
+    }
+
+    li::before {
+      content: "♥ ";
+      color: #4a90d9;
+    }
+
+    /* 버튼 스타일 */
+    button {
+      display: block;
+      margin: 24px auto 0;
+      padding: 12px 24px;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #8b0000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a52a2a;
+    }
+
+    /* 메시지 (처음에는 숨김) */
+    #message {
+      display: none;
+      margin-top: 16px;
+      padding: 16px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #8b0000;
+      background-color: #fff3cd;
+      border-radius: 8px;
+    }
+
+    /* 깐느 섹션 */
+    .cannes-section {
+      margin-top: 32px;
+      border-top: 2px solid #e8ecf0;
+      padding-top: 24px;
+    }
+
+    .cannes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .cannes-card {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-radius: 10px;
+      padding: 16px;
+      color: #ffffff;
+    }
+
+    .cannes-card .year {
+      font-size: 0.75rem;
+      color: #f0c040;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .cannes-card .title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .cannes-card .director {
+      font-size: 0.85rem;
+      color: #aaaacc;
+    }
+
+    .cannes-card .country {
+      font-size: 0.75rem;
+      color: #f0c040;
+      margin-top: 6px;
+    }
+
+    .cannes-card .map {
+      width: 100%;
+      height: 120px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .btn-cannes {
+      background-color: #1a1a2e;
+    }
+
+    .btn-cannes:hover {
+      background-color: #16213e;
+    }
+
+    /* 페이지 맨 아래 날짜 */
+    .date-footer {
+      max-width: 600px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 제목 -->
+    <h1>🎬 세계 영화 명작 탐험</h1>
+
+    <!-- 소개 문단 -->
+    <p class="intro">
+      영화는 한 편의 삶입니다. 단 두 시간 안에 우리는 다른 나라, 다른 시대, 다른 사람의 눈으로 세상을 바라봅니다.
+      이 페이지는 시대를 초월해 사랑받는 세계 명작들을 소개합니다.
+    </p>
+
+    <!-- 명작 영화의 조건 -->
+    <h2>명작이 갖춰야 할 조건</h2>
+    <ul>
+      <li>시간이 지나도 색바래지 않는 주제 의식</li>
+      <li>관객의 감정을 뒤흔드는 연출과 연기</li>
+      <li>보고 난 뒤 오래 남는 여운과 질문</li>
+    </ul>
+
+    <!-- 버튼을 누르면 메시지가 나타남 -->
+    <button onclick="showMessage()">영화 명언 보기</button>
+    <p id="message"></p>
+
+
+    <!-- 깐느 수상작 섹션 -->
+    <div class="cannes-section">
+      <h2>🏆 깐느 황금종려상 수상작</h2>
+      <button class="btn-cannes" onclick="drawCannes()">랜덤으로 뽑기</button>
+      <div class="cannes-grid" id="cannes-grid"></div>
+    </div>
+  </div>
+
+  <!-- 오늘 날짜 -->
+  <p class="date-footer" id="today-date"></p>
+
+  <script>
+    const quotes = [
+      { text: "\"영화는 꿈을 꾸는 또 다른 방식이다.\"", person: "장 뤽 고다르", wiki: "Jean-Luc_Godard" },
+      { text: "\"위대한 영화는 당신이 혼자가 아님을 느끼게 한다.\"", person: "로저 이버트", wiki: "Roger_Ebert" },
+      { text: "\"카메라는 거짓말하지 않는다. 단지 진실을 다르게 볼 뿐이다.\"", person: "오손 웰스", wiki: "Orson_Welles" },
+      { text: "\"영화는 삶에서 놓친 것들을 보여준다.\"", person: "잉마르 베리만", wiki: "Ingmar_Bergman" },
+      { text: "\"모든 영화는 기적이다.\"", person: "마틴 스코세이지", wiki: "Martin_Scorsese" },
+    ];
+
+    // 위키피디아 API로 인물 사진 미리 로드
+    const photoCache = {};
+    quotes.forEach(q => {
+      fetch(`https://en.wikipedia.org/w/api.php?action=query&titles=${q.wiki}&prop=pageimages&format=json&pithumbsize=1200&origin=*`)
+        .then(r => r.json())
+        .then(data => {
+          const pages = data.query.pages;
+          const page = pages[Object.keys(pages)[0]];
+          if (page.thumbnail) photoCache[q.wiki] = page.thumbnail.source;
+        });
+    });
+
+    let lastIndex = -1;
+
+    function showMessage() {
+      let idx;
+      do { idx = Math.floor(Math.random() * quotes.length); } while (idx === lastIndex && quotes.length > 1);
+      lastIndex = idx;
+
+      const q = quotes[idx];
+      const messageBox = document.getElementById("message");
+      messageBox.textContent = `${q.text} — ${q.person}`;
+      messageBox.style.display = "block";
+
+      if (photoCache[q.wiki]) {
+        document.body.style.backgroundImage = `url("${photoCache[q.wiki]}")`;
+      }
+    }
+
+    const cannesFilms = [
+      { year: 2024, title: "아노라", director: "숀 베이커", country: "🇺🇸 미국", mapQ: "New York, USA" },
+      { year: 2023, title: "추락의 해부", director: "쥐스틴 트리에", country: "🇫🇷 프랑스", mapQ: "France" },
+      { year: 2022, title: "슬픔의 삼각형", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Sweden" },
+      { year: 2021, title: "티탄", director: "줄리아 뒤쿠르노", country: "🇫🇷 프랑스", mapQ: "France" },
+      { year: 2019, title: "기생충", director: "봉준호", country: "🇰🇷 한국", mapQ: "Seoul, South Korea" },
+      { year: 2018, title: "어느 가족", director: "고레에다 히로카즈", country: "🇯🇵 일본", mapQ: "Tokyo, Japan" },
+      { year: 2017, title: "더 스퀘어", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Stockholm, Sweden" },
+      { year: 2016, title: "나, 다니엘 블레이크", director: "켄 로치", country: "🇬🇧 영국", mapQ: "Newcastle, England" },
+      { year: 2015, title: "디판", director: "자크 오디아르", country: "🇫🇷 프랑스", mapQ: "Paris, France" },
+      { year: 2014, title: "윈터 슬립", director: "누리 빌게 제일란", country: "🇹🇷 튀르키예", mapQ: "Cappadocia, Turkey" },
+      { year: 2013, title: "가장 따뜻한 색, 블루", director: "압델라티프 케시시", country: "🇫🇷 프랑스", mapQ: "Lille, France" },
+      { year: 2012, title: "아무르", director: "미카엘 하네케", country: "🇦🇹 오스트리아", mapQ: "Vienna, Austria" },
+      { year: 2011, title: "트리 오브 라이프", director: "테렌스 맬릭", country: "🇺🇸 미국", mapQ: "Texas, USA" },
+      { year: 2010, title: "엉클 분미", director: "아피찻퐁 위라세타쿤", country: "🇹🇭 태국", mapQ: "Khon Kaen, Thailand" },
+      { year: 2008, title: "클래스", director: "로랑 캉테", country: "🇫🇷 프랑스", mapQ: "Paris, France" },
+      { year: 2007, title: "4개월, 3주 그리고 2일", director: "크리스티안 문쥬", country: "🇷🇴 루마니아", mapQ: "Bucharest, Romania" },
+    ];
+
+    function drawCannes() {
+      const shuffled = [...cannesFilms].sort(() => Math.random() - 0.5);
+      const picked = shuffled.slice(0, 4);
+      const grid = document.getElementById("cannes-grid");
+      grid.innerHTML = picked.map(f => {
+        const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(f.mapQ)}&output=embed&z=5`;
+        return `
+        <div class="cannes-card">
+          <div class="year">${f.year}년 황금종려상</div>
+          <div class="title">${f.title}</div>
+          <div class="director">감독: ${f.director}</div>
+          <div class="country">${f.country}</div>
+          <iframe class="map" src="${mapSrc}" loading="lazy" allowfullscreen></iframe>
+        </div>`;
+      }).join("");
+    }
+
+    drawCannes();
+
+    // 페이지가 열릴 때 오늘 날짜 표시
+    const today = new Date();
+    const dateText = today.toLocaleDateString("ko-KR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      weekday: "long"
+    });
+    document.getElementById("today-date").textContent = "오늘 날짜: " + dateText;
+  </script>
+
+</body>
+</html>
