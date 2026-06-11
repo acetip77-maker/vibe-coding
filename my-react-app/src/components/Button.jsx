@@ -1,10 +1,6 @@
-function Button() {
-  function handleClick() {
-    alert('버튼이 눌렸어요!')
-  }
-
+function Button({ onClick }) {
   return (
-    <button className="my-button" onClick={handleClick}>
+    <button className="my-button" onClick={onClick}>
       클릭하세요!
     </button>
   )
