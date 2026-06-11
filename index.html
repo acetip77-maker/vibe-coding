@@ -156,9 +156,16 @@
       margin-top: 6px;
     }
 
+    .cannes-card .genre,
+    .cannes-card .actors {
+      font-size: 0.8rem;
+      color: #ccccdd;
+      margin-top: 4px;
+    }
+
     .cannes-card .map {
       width: 100%;
-      height: 120px;
+      height: 80px;
       border: none;
       border-radius: 6px;
       margin-top: 10px;
@@ -295,27 +302,27 @@
     }
 
     const cannesFilms = [
-      { year: 2024, title: "아노라", director: "숀 베이커", country: "🇺🇸 미국", mapQ: "New York, USA" },
-      { year: 2023, title: "추락의 해부", director: "쥐스틴 트리에", country: "🇫🇷 프랑스", mapQ: "France" },
-      { year: 2022, title: "슬픔의 삼각형", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Sweden" },
-      { year: 2021, title: "티탄", director: "줄리아 뒤쿠르노", country: "🇫🇷 프랑스", mapQ: "France" },
-      { year: 2019, title: "기생충", director: "봉준호", country: "🇰🇷 한국", mapQ: "Seoul, South Korea" },
-      { year: 2018, title: "어느 가족", director: "고레에다 히로카즈", country: "🇯🇵 일본", mapQ: "Tokyo, Japan" },
-      { year: 2017, title: "더 스퀘어", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Stockholm, Sweden" },
-      { year: 2016, title: "나, 다니엘 블레이크", director: "켄 로치", country: "🇬🇧 영국", mapQ: "Newcastle, England" },
-      { year: 2015, title: "디판", director: "자크 오디아르", country: "🇫🇷 프랑스", mapQ: "Paris, France" },
-      { year: 2014, title: "윈터 슬립", director: "누리 빌게 제일란", country: "🇹🇷 튀르키예", mapQ: "Cappadocia, Turkey" },
-      { year: 2013, title: "가장 따뜻한 색, 블루", director: "압델라티프 케시시", country: "🇫🇷 프랑스", mapQ: "Lille, France" },
-      { year: 2012, title: "아무르", director: "미카엘 하네케", country: "🇦🇹 오스트리아", mapQ: "Vienna, Austria" },
-      { year: 2011, title: "트리 오브 라이프", director: "테렌스 맬릭", country: "🇺🇸 미국", mapQ: "Texas, USA" },
-      { year: 2010, title: "엉클 분미", director: "아피찻퐁 위라세타쿤", country: "🇹🇭 태국", mapQ: "Khon Kaen, Thailand" },
-      { year: 2008, title: "클래스", director: "로랑 캉테", country: "🇫🇷 프랑스", mapQ: "Paris, France" },
-      { year: 2007, title: "4개월, 3주 그리고 2일", director: "크리스티안 문쥬", country: "🇷🇴 루마니아", mapQ: "Bucharest, Romania" },
+      { year: 2024, title: "아노라", director: "숀 베이커", country: "🇺🇸 미국", mapQ: "New York, USA", genre: "코미디 · 드라마", actors: "마이키 매디슨, 마크 아이델슈테인" },
+      { year: 2023, title: "추락의 해부", director: "쥐스틴 트리에", country: "🇫🇷 프랑스", mapQ: "France", genre: "법정 · 미스터리", actors: "산드라 휠러, 스완 아를로" },
+      { year: 2022, title: "슬픔의 삼각형", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Sweden", genre: "블랙코미디 · 풍자", actors: "해리스 디킨슨, 샬비 딘" },
+      { year: 2021, title: "티탄", director: "줄리아 뒤쿠르노", country: "🇫🇷 프랑스", mapQ: "France", genre: "호러 · 스릴러", actors: "아가트 루셀, 뱅상 랭동" },
+      { year: 2019, title: "기생충", director: "봉준호", country: "🇰🇷 한국", mapQ: "Seoul, South Korea", genre: "블랙코미디 · 스릴러", actors: "송강호, 이선균, 조여정" },
+      { year: 2018, title: "어느 가족", director: "고레에다 히로카즈", country: "🇯🇵 일본", mapQ: "Tokyo, Japan", genre: "가족 · 드라마", actors: "릴리 프랭키, 안도 사쿠라" },
+      { year: 2017, title: "더 스퀘어", director: "루벤 외스틀룬드", country: "🇸🇪 스웨덴", mapQ: "Stockholm, Sweden", genre: "블랙코미디 · 풍자", actors: "클라에스 방, 엘리자베스 모스" },
+      { year: 2016, title: "나, 다니엘 블레이크", director: "켄 로치", country: "🇬🇧 영국", mapQ: "Newcastle, England", genre: "사회 · 드라마", actors: "데이브 존스, 헤일리 스콰이어스" },
+      { year: 2015, title: "디판", director: "자크 오디아르", country: "🇫🇷 프랑스", mapQ: "Paris, France", genre: "범죄 · 드라마", actors: "제수타산 안토니타산, 칼리스와리 스리니바산" },
+      { year: 2014, title: "윈터 슬립", director: "누리 빌게 제일란", country: "🇹🇷 튀르키예", mapQ: "Cappadocia, Turkey", genre: "드라마", actors: "할루크 빌기네르, 멜리사 쇠젠" },
+      { year: 2013, title: "가장 따뜻한 색, 블루", director: "압델라티프 케시시", country: "🇫🇷 프랑스", mapQ: "Lille, France", genre: "로맨스 · 드라마", actors: "아델 에그자르코풀로스, 레아 세두" },
+      { year: 2012, title: "아무르", director: "미카엘 하네케", country: "🇦🇹 오스트리아", mapQ: "Vienna, Austria", genre: "드라마", actors: "장루이 트랭티냥, 에마뉘엘 리바" },
+      { year: 2011, title: "트리 오브 라이프", director: "테렌스 맬릭", country: "🇺🇸 미국", mapQ: "Texas, USA", genre: "드라마 · 판타지", actors: "브래드 피트, 제시카 차스테인" },
+      { year: 2010, title: "엉클 분미", director: "아피찻퐁 위라세타쿤", country: "🇹🇭 태국", mapQ: "Khon Kaen, Thailand", genre: "판타지 · 드라마", actors: "타나팟 사이새마르, 젠지라 퐁파스" },
+      { year: 2008, title: "클래스", director: "로랑 캉테", country: "🇫🇷 프랑스", mapQ: "Paris, France", genre: "드라마", actors: "프랑수아 베고도" },
+      { year: 2007, title: "4개월, 3주 그리고 2일", director: "크리스티안 문쥬", country: "🇷🇴 루마니아", mapQ: "Bucharest, Romania", genre: "드라마", actors: "아나마리아 마링카, 라우라 바실리우" },
     ];
 
     function drawCannes() {
       const shuffled = [...cannesFilms].sort(() => Math.random() - 0.5);
-      const picked = shuffled.slice(0, 4);
+      const picked = shuffled.slice(0, 2);
       const grid = document.getElementById("cannes-grid");
       grid.innerHTML = picked.map(f => {
         const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(f.mapQ)}&output=embed&z=5`;
@@ -324,6 +331,8 @@
           <div class="year">${f.year}년 황금종려상</div>
           <div class="title">${f.title}</div>
           <div class="director">감독: ${f.director}</div>
+          <div class="genre">장르: ${f.genre}</div>
+          <div class="actors">주연: ${f.actors}</div>
           <div class="country">${f.country}</div>
           <iframe class="map" src="${mapSrc}" loading="lazy" allowfullscreen></iframe>
         </div>`;
