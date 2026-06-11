@@ -1,11 +1,27 @@
 .app {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 24px;
 }
 
 h1 {
   font-size: 2rem;
   color: var(--text-h);
+}
+
+.my-button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  color: #ffffff;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  opacity: 0.85;
 }
