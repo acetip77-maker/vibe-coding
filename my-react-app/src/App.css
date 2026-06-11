@@ -25,3 +25,29 @@ h1 {
 .my-button:hover {
   opacity: 0.85;
 }
+
+.card {
+  width: 280px;
+  padding: 24px;
+  text-align: center;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 12px;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.card .favorite {
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--accent);
+}
