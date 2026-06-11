@@ -26,6 +26,13 @@ h1 {
   opacity: 0.85;
 }
 
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .card {
   width: 280px;
   padding: 24px;
