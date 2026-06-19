@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from './components/Button'
 import Card from './components/Card'
+import Counter from './components/Counter'
 import './App.css'
 
 const profiles = [
@@ -26,7 +27,7 @@ function randomRating() {
 }
 
 function App() {
-  const [ratings, setRatings] = useState([5, 3, 4])
+  const [ratings, setRatings] = useState([5, 1, 3])
 
   function shuffleRatings() {
     setRatings(profiles.map(() => randomRating()))
@@ -36,6 +37,7 @@ function App() {
     <div className="app">
       <h1>안녕하세요, React 시작합니다!</h1>
       <Button onClick={shuffleRatings} />
+      <Counter />
       <div className="card-list">
         {profiles.map((profile, i) => (
           <Card
